@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorAccent"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="?attr/actionBarTheme"
+        app:layout_scrollFlags="scroll|enterAlways"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+        app:theme="@style/ThemeOverlay.AppCompat.Light" >
+        <TextView
+            android:id="@+id/textView"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:text="திருக்குறள்" />
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <com.google.android.material.tabs.TabLayout
+            android:layout_below="@+id/toolbar"
+            android:id="@+id/tab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            app:tabSelectedTextColor="@android:color/black"
+            app:tabTextColor="@color/colorice">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabitem1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:text="அறத்துப்பால்"
+                />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabitem2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="பொருட்பால்" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/tabitem3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="காமத்துப்பால்" />
+        </com.google.android.material.tabs.TabLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:layout_below="@+id/tab"
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+
+</RelativeLayout>
